@@ -93,7 +93,7 @@ unsigned char keyfind(){
         {  
             //3 0 on/c
                         
-            if(lim==0)LCD_Char(keypad[rowloc][0]);   /*Display Keypad location on LCD*/
+            LCD_Char(keypad[rowloc][0]);   /*Display Keypad location on LCD*/
             
             if(rowloc==3) lim=0;
             
@@ -102,7 +102,7 @@ unsigned char keyfind(){
         else 
             if(col_loc==0xd0)
         {
-            if(lim==0)LCD_Char(keypad[rowloc][1]);   /*Display Keypad location on LCD*/
+            LCD_Char(keypad[rowloc][1]);   /*Display Keypad location on LCD*/
             return keypad[rowloc][1];       /*Return key pressed value to calling function*/   
         }
         else
@@ -111,13 +111,13 @@ unsigned char keyfind(){
             //3 2 =
             if(rowloc==3) lim=1;
             
-            if(lim==0)LCD_Char(keypad[rowloc][2]);   /*Display Keypad location on LCD*/
+            LCD_Char(keypad[rowloc][2]);   /*Display Keypad location on LCD*/
             return keypad[rowloc][2];       /*Return key pressed value to calling function*/
         }
         else
             
         {
-            if(lim==0)LCD_Char(keypad[rowloc][3]);   /*Display Keypad location on LCD*/
+            LCD_Char(keypad[rowloc][3]);   /*Display Keypad location on LCD*/
             return keypad[rowloc][3];       /*Return key pressed value to calling function*/           
         }    
     }

@@ -62,3 +62,5 @@
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
 
 #include <xc.h>
+
+#define _XTAL_FREQ 20000000
