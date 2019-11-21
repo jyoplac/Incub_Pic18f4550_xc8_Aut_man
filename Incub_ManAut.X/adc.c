@@ -4,7 +4,7 @@
 void ADC_Init()
 {    
     TRISA = 0xff;       /*set as input port*/
-    ADCON1 = 0x00;      /*ref vtg is VDD and Configure pin as analog pin*/    
+    ADCON1 = 0x0D;      /*ref vtg is VDD and Configure pin as analog pin*/    
     ADCON2 = 0x92;      /*Right Justified, 4Tad and Fosc/32. */
     ADRESH=0;           /*Flush ADC output Register*/
     ADRESL=0;   

@@ -1,2 +1,1 @@
-dist/default/production\doprnt.p1: \
-  C:\Program\ Files\ (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+ dist/default/production/doprnt.d  dist/default/production/doprnt.p1:  C:/Program\ Files\ (x86)/Microchip/xc8/v2.10/pic/sources/c90/common/doprnt.c

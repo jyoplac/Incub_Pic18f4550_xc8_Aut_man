@@ -1,5 +1,6 @@
 
 #include "teclado.h"
+#include "lcd.h"
 
 unsigned char keyfind(){
     
@@ -92,8 +93,7 @@ unsigned char keyfind(){
         if(col_loc==0xe0)
         {  
             //3 0 on/c
-                        
-            LCD_Char(keypad[rowloc][0]);   /*Display Keypad location on LCD*/
+            if(lim==0) LCD_Char(keypad[rowloc][0]);   /*Display Keypad location on LCD*/
             
             if(rowloc==3) lim=0;
             
@@ -102,27 +102,27 @@ unsigned char keyfind(){
         else 
             if(col_loc==0xd0)
         {
-            LCD_Char(keypad[rowloc][1]);   /*Display Keypad location on LCD*/
+            if(lim==0) LCD_Char(keypad[rowloc][1]);   /*Display Keypad location on LCD*/
             return keypad[rowloc][1];       /*Return key pressed value to calling function*/   
         }
         else
             if(col_loc==0xb0)
         {
-            //3 2 =
+            //3 2 =           
             if(rowloc==3) lim=1;
             
-            LCD_Char(keypad[rowloc][2]);   /*Display Keypad location on LCD*/
+            if(lim==0)LCD_Char(keypad[rowloc][2]);   /*Display Keypad location on LCD*/
             return keypad[rowloc][2];       /*Return key pressed value to calling function*/
         }
         else
             
         {
-            LCD_Char(keypad[rowloc][3]);   /*Display Keypad location on LCD*/
+            if(lim==0) LCD_Char(keypad[rowloc][3]);   /*Display Keypad location on LCD*/
             return keypad[rowloc][3];       /*Return key pressed value to calling function*/           
         }    
     }
     
-   MSdelay(200);     
+   //MSdelay(300);     
    return 0;
 }
 
